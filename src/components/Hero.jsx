@@ -71,7 +71,7 @@ export default function Hero() {
             }}
           >
             <IconBrandGithub size={22} />
-            View on GitHub
+            Star in GitHub
           </a>
         </div>
 

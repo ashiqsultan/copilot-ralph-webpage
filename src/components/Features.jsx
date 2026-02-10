@@ -37,33 +37,6 @@ export default function Features() {
     },
   ];
 
-  const planBenefits = [
-    {
-      icon: IconTarget,
-      title: "Prevents Context Rot",
-      description:
-        "When you execute requirements one by one without planning, the AI loses track of the bigger picture. Each task becomes isolated, leading to inconsistent implementations. Plan mode ensures the AI understands all requirements together, maintaining coherent architecture throughout.",
-    },
-    {
-      icon: IconBrain,
-      title: "Better Planning & Architecture",
-      description:
-        "With all requirements visible upfront, the AI can make smarter architectural decisions. It considers dependencies between tasks, reuses code appropriately, and designs solutions that work well together rather than solving each problem in isolation.",
-    },
-    {
-      icon: IconLock,
-      title: "Task Isolation in Execution",
-      description:
-        "After planning, each requirement runs in a separate execution context. This prevents context window overflow and keeps the AI focused on one task at a time, while still maintaining awareness of the overall plan. It's the best of both worlds.",
-    },
-    {
-      icon: IconBolt,
-      title: "Reduced Context Confusion",
-      description:
-        "Large context windows with multiple unrelated conversations lead to confusion and mistakes. Plan mode creates a clear separation of concerns: plan everything once, then execute systematically. The AI knows exactly what it needs to do and in what order.",
-    },
-  ];
-
   const steps = [
     {
       num: "01",
@@ -144,6 +117,41 @@ export default function Features() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Video Demo */}
+      <div className="mb-28">
+        <div className="text-center mb-14">
+          <span
+            className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest border mb-6"
+            style={{
+              borderColor: "var(--border)",
+              color: "var(--accent-purple)",
+            }}
+          >
+            Demo
+          </span>
+          <h2
+            className="text-4xl md:text-5xl font-extrabold tracking-tight"
+            style={{ color: "var(--text-primary)" }}
+          >
+            See It In Action
+          </h2>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="glass-card rounded-2xl overflow-hidden">
+            <div className="relative" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/U796vzV5oXc"
+                title="Ralph Demo Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
       </div>
 
