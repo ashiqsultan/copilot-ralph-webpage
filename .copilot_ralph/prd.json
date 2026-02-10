@@ -17,7 +17,7 @@
     "id": 2,
     "title": "theme set for tailwind",
     "description": "Add this as theme in index css\n  #000000; /* Pure black background */\n  #16181c; /* Slightly lighter for cards/inputs */\n\n  /* Borders - Subtle and thin */\n  #2f3336; /* Standard Twitter border */\n  #202327; /* Muted separators */\n\n  /* Text - High contrast */\n  #e7e9ea; /* Main white text */\n  #71767b; /* Secondary/Username grey */\n  #536471; /* Tertiary/Timestamp grey */\n\n  /* Accents - Twitter Blue */\n  #1d9bf0; /* The main \"Post\" blue */\n  #1a8cd8; /* Slightly darker blue on hover */\n  #8ecdf8; /* Light blue for active icons/glows */\n\n  /* Status Colors */\n  #1d9bf0; /* Links and verification badges */\n  #1d9bf033; /* Transparent blue for ring focus */\n  #ffd400; /* Gold (Verified/Premium) */\n  #f4212e; /* Heart/Like red */",
-    "isDone": false,
+    "isDone": true,
     "plan": "1. Add CSS custom properties in src/index.css :root section\n2. Define background colors: --bg-black (#000000), --bg-card (#16181c)\n3. Define border colors: --border (#2f3336), --border-muted (#202327)\n4. Define text colors: --text-primary (#e7e9ea), --text-secondary (#71767b), --text-tertiary (#536471)\n5. Define accent colors: --accent-blue (#1d9bf0), --accent-blue-hover (#1a8cd8), --accent-blue-light (#8ecdf8)\n6. Define status colors: --gold (#ffd400), --red (#f4212e), --blue-transparent (#1d9bf033)\n7. Extend Tailwind theme in tailwind.config.js to use these CSS variables\n8. Set body background to black and text to primary white"
   },
   {

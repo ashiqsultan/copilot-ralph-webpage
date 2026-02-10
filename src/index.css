@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Backgrounds */
+    --bg-black: #000000;
+    --bg-card: #16181c;
+
+    /* Borders */
+    --border: #2f3336;
+    --border-muted: #202327;
+
+    /* Text */
+    --text-primary: #e7e9ea;
+    --text-secondary: #71767b;
+    --text-tertiary: #536471;
+
+    /* Accents - Twitter Blue */
+    --accent-blue: #1d9bf0;
+    --accent-blue-hover: #1a8cd8;
+    --accent-blue-light: #8ecdf8;
+
+    /* Status Colors */
+    --blue-transparent: #1d9bf033;
+    --gold: #ffd400;
+    --red: #f4212e;
+  }
+
+  body {
+    background-color: var(--bg-black);
+    color: var(--text-primary);
+  }
+}
