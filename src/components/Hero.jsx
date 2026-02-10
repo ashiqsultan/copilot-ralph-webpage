@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
       <div className="text-center mb-12 animate-fade-in-up">
         <h1 className="text-sm md:text-6xl font-bold mb-6 text-text-primary">
-          <span className="text-twitter-blue">Copilot Ralph</span>
+          <span style={{ color: '#24289A' }}>Copilot</span> <span style={{ color: '#F1D01D' }}>Ralph</span>
         </h1>
         <p className="text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto">
           A desktop application that helps you build applications systematically with GitHub Copilot. 

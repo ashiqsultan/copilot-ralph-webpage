@@ -10,5 +10,11 @@
     "title": "Update the image",
     "description": "in the place that show the image make it a two column view and show image in right and in the left add the message \"Desktop app to vibe code using copilot \"",
     "isDone": true
+  },
+  {
+    "id": 2,
+    "title": "updat the title colors",
+    "description": "The words \"Copilot\" should be purple \"#24289A\" and Ralph should be Yellow \"#F1D01D\"",
+    "isDone": true
   }
 ]
