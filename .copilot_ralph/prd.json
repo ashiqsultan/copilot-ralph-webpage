@@ -16,5 +16,11 @@
     "title": "updat the title colors",
     "description": "The words \"Copilot\" should be purple \"#24289A\" and Ralph should be Yellow \"#F1D01D\"",
     "isDone": true
+  },
+  {
+    "id": 3,
+    "title": "Fix build fail in ntlify",
+    "description": "Build is failing in netlify here is what netlify is telling me\nnpm run build\n4:48:48 PM: > copilot_ralph_webpage@0.0.0 build\n4:48:48 PM: > vite build\n4:48:48 PM: /opt/build/repo/node_modules/rollup/dist/native.js:115\n4:48:48 PM: \t\tthrow new Error(\n4:48:48 PM: \t\t      ^\n4:48:48 PM: Error: Cannot find module @rollup/rollup-linux-x64-gnu. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.\n4:48:48 PM:     at requireWithFriendlyError (/opt/build/repo/node_modules/rollup/dist/native.js:115:9)\n4:48:48 PM:     at Object.<anonymous> (/opt/build/repo/node_modules/rollup/dist/native.js:124:76)\n\nI think its something related with @netlify.toml config or npm not installling , not sure, olease fix this",
+    "isDone": true
   }
 ]
