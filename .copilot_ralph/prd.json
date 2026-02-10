@@ -10,7 +10,7 @@
     "id": 1,
     "title": "install tabler icons",
     "description": "use npm i @tabler/icons-react to install\nIf you think any of the requirements coming up requires an icon, the use the tabler icons",
-    "isDone": false,
+    "isDone": true,
     "plan": "1. Install Tabler Icons: npm i @tabler/icons-react\n2. Verify installation in package.json\n3. Test import in App.jsx to ensure it works: import { IconDownload } from '@tabler/icons-react'"
   },
   {
