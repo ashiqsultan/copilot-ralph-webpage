@@ -47,32 +47,46 @@ export default function Features() {
     }
   ];
 
+  const steps = [
+    { num: '01', title: 'Define Requirements', desc: 'Add your requirements as simple JSON entries. Each requirement describes what you want to build.' },
+    { num: '02', title: 'Generate Plan', desc: 'Let AI analyze all requirements together and create a comprehensive execution plan with full context.' },
+    { num: '03', title: 'Execute One by One', desc: 'Ralph picks requirements sequentially, executes them in isolated contexts, and commits changes after each task.' },
+    { num: '04', title: 'Review & Iterate', desc: 'Check git diffs, review changes, and add more requirements as needed. Everything is transparent and trackable.' }
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="relative max-w-6xl mx-auto px-6 py-20">
       {/* Why Plan Mode Section */}
-      <div className="mb-20">
-        <h2 className="text-4xl font-bold text-text-primary mb-6 text-center animate-fade-in-up">
-          Why Plan Mode Matters
-        </h2>
-        <p className="text-lg text-text-secondary mb-8 text-center max-w-3xl mx-auto">
-          Plan mode is the secret sauce that makes Copilot Ralph effective. Here's why:
-        </p>
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="mb-28">
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest border mb-6"
+            style={{ borderColor: 'var(--border)', color: 'var(--accent-purple)' }}>
+            Core Concept
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4" style={{ color: 'var(--text-primary)' }}>
+            Why <span className="gradient-text">Plan Mode</span> Matters
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
+            Plan mode is the secret sauce that makes Copilot Ralph effective.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
           {planBenefits.map((benefit, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="glass-card rounded-2xl p-6 group cursor-default"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-twitter-blue/10 p-3 rounded-lg group-hover:bg-twitter-blue/20 transition-colors">
-                  <benefit.icon size={24} className="text-twitter-blue" />
+                <div className="flex-shrink-0 p-3 rounded-xl transition-colors duration-300"
+                  style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.12), rgba(139,92,246,0.12))' }}>
+                  <benefit.icon size={24} style={{ color: 'var(--accent-blue)' }} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">
+                  <h3 className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-blue-400"
+                    style={{ color: 'var(--text-primary)' }}>
                     {benefit.title}
                   </h3>
-                  <p className="text-text-secondary leading-relaxed">
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                     {benefit.description}
                   </p>
                 </div>
@@ -83,25 +97,33 @@ export default function Features() {
       </div>
 
       {/* Features Grid */}
-      <div className="mb-12">
-        <h2 className="text-4xl font-bold text-text-primary mb-12 text-center">
-          Key Features
-        </h2>
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="mb-28">
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest border mb-6"
+            style={{ borderColor: 'var(--border)', color: 'var(--accent-cyan)' }}>
+            Features
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight" style={{ color: 'var(--text-primary)' }}>
+            Everything You Need
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
+              className="glass-card rounded-2xl p-6 group cursor-default"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-twitter-blue/10 p-3 rounded-lg group-hover:bg-twitter-blue/20 transition-colors">
-                  <feature.icon size={28} className="text-twitter-blue" />
+                <div className="flex-shrink-0 p-3 rounded-xl transition-colors duration-300"
+                  style={{ background: 'linear-gradient(135deg, rgba(6,182,212,0.12), rgba(59,130,246,0.12))' }}>
+                  <feature.icon size={26} style={{ color: 'var(--accent-cyan)' }} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">
+                  <h3 className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-cyan-400"
+                    style={{ color: 'var(--text-primary)' }}>
                     {feature.title}
                   </h3>
-                  <p className="text-text-secondary leading-relaxed">
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                     {feature.description}
                   </p>
                 </div>
@@ -112,54 +134,44 @@ export default function Features() {
       </div>
 
       {/* How It Works */}
-      <div className="mt-20">
-        <h2 className="text-4xl font-bold text-text-primary mb-8 text-center">
-          How It Works
-        </h2>
-        <div className="max-w-3xl mx-auto space-y-4">
-          <div className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] group">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-twitter-blue/10 flex items-center justify-center text-xl font-bold text-twitter-blue group-hover:bg-twitter-blue group-hover:text-white transition-colors">1</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">Define Requirements</h3>
-                <p className="text-text-secondary leading-relaxed">
-                  Add your requirements as simple JSON entries. Each requirement describes what you want to build.
-                </p>
+      <div>
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest border mb-6"
+            style={{ borderColor: 'var(--border)', color: 'var(--accent-blue)' }}>
+            Workflow
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight" style={{ color: 'var(--text-primary)' }}>
+            How It Works
+          </h2>
+        </div>
+        <div className="max-w-3xl mx-auto relative">
+          {/* Vertical line */}
+          <div className="absolute left-[27px] top-4 bottom-4 w-px" style={{ background: 'linear-gradient(to bottom, var(--accent-blue), var(--accent-purple), transparent)' }} />
+
+          <div className="space-y-5">
+            {steps.map((step, index) => (
+              <div key={index} className="glass-card rounded-2xl p-6 group cursor-default relative">
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 relative z-10 w-[54px] h-[54px] rounded-xl flex items-center justify-center text-sm font-bold transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15))',
+                      color: 'var(--accent-blue)',
+                      border: '1px solid rgba(59,130,246,0.2)'
+                    }}>
+                    {step.num}
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-blue-400"
+                      style={{ color: 'var(--text-primary)' }}>
+                      {step.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] group">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-twitter-blue/10 flex items-center justify-center text-xl font-bold text-twitter-blue group-hover:bg-twitter-blue group-hover:text-white transition-colors">2</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">Generate Plan (Optional but Recommended)</h3>
-                <p className="text-text-secondary leading-relaxed">
-                  Let AI analyze all requirements together and create a comprehensive execution plan with full context.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] group">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-twitter-blue/10 flex items-center justify-center text-xl font-bold text-twitter-blue group-hover:bg-twitter-blue group-hover:text-white transition-colors">3</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">Execute One by One</h3>
-                <p className="text-text-secondary leading-relaxed">
-                  Ralph picks requirements sequentially, executes them in isolated contexts, and commits changes after each task.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] group">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-twitter-blue/10 flex items-center justify-center text-xl font-bold text-twitter-blue group-hover:bg-twitter-blue group-hover:text-white transition-colors">4</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">Review & Iterate</h3>
-                <p className="text-text-secondary leading-relaxed">
-                  Check git diffs, review changes, and add more requirements as needed. Everything is transparent and trackable.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
