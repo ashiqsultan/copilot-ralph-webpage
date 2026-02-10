@@ -31,7 +31,7 @@
     "id": 4,
     "title": "Netlify config",
     "description": "This is a react application that I will be building and deploying it to netlify, if you think there needs to be added any config, please do so. Also create a read me file to update the instructions.",
-    "isDone": false,
+    "isDone": true,
     "plan": "1. Create netlify.toml in root with build config: command='npm run build', publish='dist'\n2. Add redirects rule for SPA: [[redirects]] from='/*' to='/index.html' status=200\n3. Update README.md with deployment section\n4. Add instructions for connecting repo to Netlify\n5. Document environment variables if needed (none currently)\n6. Add build status badge placeholder"
   }
 ]

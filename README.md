@@ -1,16 +1,125 @@
-# React + Vite
+# Copilot Ralph Webpage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-SITE-ID/deploy-status)](https://app.netlify.com/sites/YOUR-SITE-NAME/deploys)
 
-Currently, two official plugins are available:
+A React application showcasing GitHub Copilot Ralph features with a modern dark theme inspired by Twitter's design language.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Hero section with application screenshot and download links
+- Features overview highlighting Plan Mode and Git Integration
+- Integrated diff view and JSON storage
+- Responsive design with Tailwind CSS
+- Tabler Icons for consistent iconography
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19.2.0** - UI framework
+- **Vite 7.3.1** - Build tool and dev server
+- **Tailwind CSS 4.1.18** - Utility-first CSS framework
+- **Tabler Icons React** - Icon library
+- **PostCSS** - CSS processing
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Development
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
+```
+
+## Deployment to Netlify
+
+This project is configured for seamless deployment to Netlify.
+
+### Quick Deploy
+
+1. **Connect Your Repository**
+   - Log in to [Netlify](https://app.netlify.com/)
+   - Click "Add new site" → "Import an existing project"
+   - Connect your Git provider (GitHub, GitLab, Bitbucket)
+   - Select this repository
+
+2. **Configure Build Settings**
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - (These are already configured in `netlify.toml`)
+
+3. **Deploy**
+   - Click "Deploy site"
+   - Netlify will automatically build and deploy your site
+   - Every push to your main branch will trigger a new deployment
+
+### Manual Deploy
+
+```bash
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Build the project
+npm run build
+
+# Deploy to Netlify
+netlify deploy --prod
+```
+
+### Configuration
+
+The `netlify.toml` file includes:
+- Build command and publish directory
+- SPA redirect rules (routes all requests to `index.html`)
+
+### Environment Variables
+
+Currently, this project does not require any environment variables. If you need to add them in the future:
+
+1. Go to Site settings → Environment variables in Netlify dashboard
+2. Add your variables
+3. Redeploy the site
+
+### Custom Domain
+
+To add a custom domain:
+1. Go to Site settings → Domain management
+2. Click "Add custom domain"
+3. Follow the instructions to configure DNS
+
+## Project Structure
+
+```
+copilot_ralph_webpage/
+├── public/
+│   └── screenshots/     # Application screenshots
+├── src/
+│   ├── components/      # React components
+│   ├── App.jsx          # Main application component
+│   ├── index.css        # Global styles and Tailwind directives
+│   └── main.jsx         # Application entry point
+├── index.html           # HTML template
+├── netlify.toml         # Netlify configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+├── postcss.config.js    # PostCSS configuration
+└── vite.config.js       # Vite configuration
+```
+
+## License
+
+MIT
