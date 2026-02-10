@@ -24,7 +24,7 @@
     "id": 3,
     "title": "Add homepage content",
     "description": "Refer this project read me and to understand the about the app and create home page\nThe homepage should have a hero view. I use the screenshot from the read me.\nYeah, download button, which should use the release download link from the read me\nAnd other general information like the application has plan mode, integrated git diff view etc.\n\nExplained why plan mode is important. Use your understanding and not just limited to the read me. \n\nLink to readme: https://github.com/ashiqsultan/copilot-ralph/blob/main/README.md",
-    "isDone": false,
+    "isDone": true,
     "plan": "1. Create src/components/Hero.jsx component with screenshot image from screenshots/ss02.png\n2. Add hero headline emphasizing 'vibe code using GitHub Copilot' with plan mode\n3. Create download button component using IconDownload from Tabler, link to: https://github.com/ashiqsultan/copilot-ralph/releases/download/v1.0.0/CopilotRalph.dmg\n4. Create features section explaining: Plan mode (prevents context rot), Git integration (commits per task), Diff view (visibility), JSON storage\n5. Add 'Why Plan Mode' section emphasizing separation of concerns, better planning, reduced context confusion, task isolation\n6. Create src/components/Features.jsx for feature cards layout\n7. Update App.jsx to import and render Hero and Features components\n8. Style with Twitter-like dark theme using defined colors"
   },
   {

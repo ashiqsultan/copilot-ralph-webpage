@@ -1,16 +1,30 @@
-import { IconDownload } from '@tabler/icons-react';
+import Hero from './components/Hero';
+import Features from './components/Features';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
-      <div className="bg-white rounded-lg shadow-xl p-8 max-w-md">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Hello world</h1>
-        <p className="text-gray-600">Tailwind CSS is configured and working!</p>
-        <div className="mt-4 flex items-center gap-2 text-blue-600">
-          <IconDownload size={20} />
-          <span>Tabler Icons working!</span>
+    <div className="min-h-screen bg-bg-black">
+      <Hero />
+      <Features />
+      
+      {/* Footer */}
+      <footer className="border-t border-border py-8 mt-20">
+        <div className="max-w-6xl mx-auto px-6 text-center text-text-muted">
+          <p className="mb-2">
+            Built with React, Vite, and Electron
+          </p>
+          <p>
+            <a 
+              href="https://github.com/ashiqsultan/copilot-ralph" 
+              className="text-twitter-blue hover:text-twitter-blue-hover transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+          </p>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
