@@ -1,4 +1,4 @@
-import { IconCheckbox, IconGitCommit, IconFileCode, IconJson } from '@tabler/icons-react';
+import { IconCheckbox, IconGitCommit, IconFileCode, IconJson, IconTarget, IconBrain, IconLock, IconBolt } from '@tabler/icons-react';
 
 export default function Features() {
   const features = [
@@ -24,51 +24,61 @@ export default function Features() {
     }
   ];
 
+  const planBenefits = [
+    {
+      icon: IconTarget,
+      title: 'Prevents Context Rot',
+      description: 'When you execute requirements one by one without planning, the AI loses track of the bigger picture. Each task becomes isolated, leading to inconsistent implementations. Plan mode ensures the AI understands all requirements together, maintaining coherent architecture throughout.'
+    },
+    {
+      icon: IconBrain,
+      title: 'Better Planning & Architecture',
+      description: 'With all requirements visible upfront, the AI can make smarter architectural decisions. It considers dependencies between tasks, reuses code appropriately, and designs solutions that work well together rather than solving each problem in isolation.'
+    },
+    {
+      icon: IconLock,
+      title: 'Task Isolation in Execution',
+      description: 'After planning, each requirement runs in a separate execution context. This prevents context window overflow and keeps the AI focused on one task at a time, while still maintaining awareness of the overall plan. It\'s the best of both worlds.'
+    },
+    {
+      icon: IconBolt,
+      title: 'Reduced Context Confusion',
+      description: 'Large context windows with multiple unrelated conversations lead to confusion and mistakes. Plan mode creates a clear separation of concerns: plan everything once, then execute systematically. The AI knows exactly what it needs to do and in what order.'
+    }
+  ];
+
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
       {/* Why Plan Mode Section */}
       <div className="mb-20">
-        <h2 className="text-4xl font-bold text-text-primary mb-6 text-center">
+        <h2 className="text-4xl font-bold text-text-primary mb-6 text-center animate-fade-in-up">
           Why Plan Mode Matters
         </h2>
-        <div className="max-w-4xl mx-auto bg-bg-dark border border-border rounded-xl p-8">
-          <p className="text-lg text-text-secondary mb-4">
-            Plan mode is the secret sauce that makes Copilot Ralph effective. Here's why:
-          </p>
-          <div className="space-y-4 text-text-secondary">
-            <div>
-              <h3 className="text-xl font-semibold text-text-primary mb-2">🎯 Prevents Context Rot</h3>
-              <p>
-                When you execute requirements one by one without planning, the AI loses track of the bigger picture. 
-                Each task becomes isolated, leading to inconsistent implementations. Plan mode ensures the AI understands 
-                all requirements together, maintaining coherent architecture throughout.
-              </p>
+        <p className="text-lg text-text-secondary mb-8 text-center max-w-3xl mx-auto">
+          Plan mode is the secret sauce that makes Copilot Ralph effective. Here's why:
+        </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {planBenefits.map((benefit, index) => (
+            <div 
+              key={index}
+              className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="bg-twitter-blue/10 p-3 rounded-lg group-hover:bg-twitter-blue/20 transition-colors">
+                  <benefit.icon size={24} className="text-twitter-blue" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-text-primary mb-2">🧠 Better Planning & Architecture</h3>
-              <p>
-                With all requirements visible upfront, the AI can make smarter architectural decisions. It considers 
-                dependencies between tasks, reuses code appropriately, and designs solutions that work well together 
-                rather than solving each problem in isolation.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-text-primary mb-2">🔒 Task Isolation in Execution</h3>
-              <p>
-                After planning, each requirement runs in a separate execution context. This prevents context window 
-                overflow and keeps the AI focused on one task at a time, while still maintaining awareness of the 
-                overall plan. It's the best of both worlds.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-text-primary mb-2">⚡ Reduced Context Confusion</h3>
-              <p>
-                Large context windows with multiple unrelated conversations lead to confusion and mistakes. Plan mode 
-                creates a clear separation of concerns: plan everything once, then execute systematically. The AI 
-                knows exactly what it needs to do and in what order.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -81,17 +91,17 @@ export default function Features() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-bg-dark border border-border rounded-xl p-6 hover:border-twitter-blue-light transition-colors"
+              className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-twitter-blue-light/10 p-3 rounded-lg">
+                <div className="bg-twitter-blue/10 p-3 rounded-lg group-hover:bg-twitter-blue/20 transition-colors">
                   <feature.icon size={28} className="text-twitter-blue" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-text-primary mb-2">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-text-secondary">
+                  <p className="text-text-secondary leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -106,46 +116,46 @@ export default function Features() {
         <h2 className="text-4xl font-bold text-text-primary mb-8 text-center">
           How It Works
         </h2>
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="bg-bg-dark border border-border rounded-xl p-6">
+        <div className="max-w-3xl mx-auto space-y-4">
+          <div className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] group">
             <div className="flex gap-4">
-              <div className="text-2xl font-bold text-twitter-blue min-w-[2rem]">1</div>
-              <div>
-                <h3 className="text-xl font-semibold text-text-primary mb-2">Define Requirements</h3>
-                <p className="text-text-secondary">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-twitter-blue/10 flex items-center justify-center text-xl font-bold text-twitter-blue group-hover:bg-twitter-blue group-hover:text-white transition-colors">1</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">Define Requirements</h3>
+                <p className="text-text-secondary leading-relaxed">
                   Add your requirements as simple JSON entries. Each requirement describes what you want to build.
                 </p>
               </div>
             </div>
           </div>
-          <div className="bg-bg-dark border border-border rounded-xl p-6">
+          <div className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] group">
             <div className="flex gap-4">
-              <div className="text-2xl font-bold text-twitter-blue min-w-[2rem]">2</div>
-              <div>
-                <h3 className="text-xl font-semibold text-text-primary mb-2">Generate Plan (Optional but Recommended)</h3>
-                <p className="text-text-secondary">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-twitter-blue/10 flex items-center justify-center text-xl font-bold text-twitter-blue group-hover:bg-twitter-blue group-hover:text-white transition-colors">2</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">Generate Plan (Optional but Recommended)</h3>
+                <p className="text-text-secondary leading-relaxed">
                   Let AI analyze all requirements together and create a comprehensive execution plan with full context.
                 </p>
               </div>
             </div>
           </div>
-          <div className="bg-bg-dark border border-border rounded-xl p-6">
+          <div className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] group">
             <div className="flex gap-4">
-              <div className="text-2xl font-bold text-twitter-blue min-w-[2rem]">3</div>
-              <div>
-                <h3 className="text-xl font-semibold text-text-primary mb-2">Execute One by One</h3>
-                <p className="text-text-secondary">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-twitter-blue/10 flex items-center justify-center text-xl font-bold text-twitter-blue group-hover:bg-twitter-blue group-hover:text-white transition-colors">3</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">Execute One by One</h3>
+                <p className="text-text-secondary leading-relaxed">
                   Ralph picks requirements sequentially, executes them in isolated contexts, and commits changes after each task.
                 </p>
               </div>
             </div>
           </div>
-          <div className="bg-bg-dark border border-border rounded-xl p-6">
+          <div className="bg-bg-card rounded-xl p-6 hover:bg-bg-card/80 transition-all duration-300 hover:scale-[1.02] group">
             <div className="flex gap-4">
-              <div className="text-2xl font-bold text-twitter-blue min-w-[2rem]">4</div>
-              <div>
-                <h3 className="text-xl font-semibold text-text-primary mb-2">Review & Iterate</h3>
-                <p className="text-text-secondary">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-twitter-blue/10 flex items-center justify-center text-xl font-bold text-twitter-blue group-hover:bg-twitter-blue group-hover:text-white transition-colors">4</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-twitter-blue transition-colors">Review & Iterate</h3>
+                <p className="text-text-secondary leading-relaxed">
                   Check git diffs, review changes, and add more requirements as needed. Everything is transparent and trackable.
                 </p>
               </div>
