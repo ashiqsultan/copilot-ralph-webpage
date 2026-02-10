@@ -23,12 +23,19 @@ export default function Hero() {
         </p>
       </div>
 
-      <div className="mt-16 rounded-xl overflow-hidden shadow-2xl animate-scale-in hover:shadow-twitter-blue/20 transition-shadow duration-300">
-        <img 
-          src="/screenshots/ss02.png" 
-          alt="Copilot Ralph Application Screenshot" 
-          className="w-full h-auto"
-        />
+      <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
+        <div className="flex items-center justify-center md:justify-start">
+          <p className="text-2xl md:text-3xl font-semibold text-text-primary">
+            Desktop app to vibe code using copilot
+          </p>
+        </div>
+        <div className="rounded-xl overflow-hidden shadow-2xl animate-scale-in hover:shadow-twitter-blue/20 transition-shadow duration-300">
+          <img 
+            src="/screenshots/ss02.png" 
+            alt="Copilot Ralph Application Screenshot" 
+            className="w-full h-auto"
+          />
+        </div>
       </div>
     </div>
   );

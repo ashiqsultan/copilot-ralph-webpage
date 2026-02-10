@@ -1,0 +1,7 @@
+
+---
+[2026-02-10T10:36:16.305Z]
+[0] update hero
+- Updated the Hero section title from "Vibe Code with GitHub Copilot" to "Copilot Ralph"
+- The title is styled with the twitter-blue color class as requested
+- The change maintains the existing responsive design and styling structure
