@@ -1,4 +1,4 @@
-import { IconBrandAppleFilled, IconArrowDown } from "@tabler/icons-react";
+import { IconBrandAppleFilled, IconArrowDown, IconBrandGithub } from "@tabler/icons-react";
 
 export default function Hero() {
   return (
@@ -70,6 +70,7 @@ export default function Hero() {
               color: "var(--text-secondary)",
             }}
           >
+            <IconBrandGithub size={22} />
             View on GitHub
           </a>
         </div>
