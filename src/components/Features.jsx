@@ -119,7 +119,7 @@ export default function Features() {
                   className="flex-shrink-0 p-3 rounded-xl transition-colors duration-300"
                   style={{
                     background:
-                      "linear-gradient(135deg, rgba(6,182,212,0.12), rgba(59,130,246,0.12))",
+                      "linear-gradient(135deg, rgba(16,185,129,0.12), rgba(14,165,233,0.12))",
                   }}
                 >
                   <feature.icon
@@ -129,7 +129,7 @@ export default function Features() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-cyan-400"
+                    className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-[#7dd3fc]"
                     style={{ color: "var(--text-primary)" }}
                   >
                     {feature.title}
@@ -211,16 +211,16 @@ export default function Features() {
                     className="flex-shrink-0 relative z-10 w-[54px] h-[54px] rounded-xl flex items-center justify-center text-sm font-bold transition-all duration-300"
                     style={{
                       background:
-                        "linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15))",
+                        "linear-gradient(135deg, rgba(14,165,233,0.15), rgba(20,184,166,0.15))",
                       color: "var(--accent-blue)",
-                      border: "1px solid rgba(59,130,246,0.2)",
+                      border: "1px solid rgba(14,165,233,0.2)",
                     }}
                   >
                     {step.num}
                   </div>
                   <div className="flex-1 pt-1">
                     <h3
-                      className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-blue-400"
+                      className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-[#7dd3fc]"
                       style={{ color: "var(--text-primary)" }}
                     >
                       {step.title}

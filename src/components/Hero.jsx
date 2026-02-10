@@ -6,15 +6,15 @@ export default function Hero() {
       {/* Background glows */}
       <div
         className="hero-glow top-[-200px] left-[-100px]"
-        style={{ background: "#3b82f6" }}
+        style={{ background: "#0ea5e9" }}
       />
       <div
         className="hero-glow top-[-100px] right-[-200px]"
-        style={{ background: "#8b5cf6" }}
+        style={{ background: "#14b8a6" }}
       />
       <div
         className="hero-glow bottom-[-200px] left-[30%]"
-        style={{ background: "#06b6d4" }}
+        style={{ background: "#10b981" }}
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-24 pb-12 md:pt-32 md:pb-16">
@@ -23,7 +23,7 @@ export default function Hero() {
           className="flex justify-center mb-8 animate-fade-in-up"
           style={{ animationDelay: "0.1s" }}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-blue-500/20 bg-blue-500/10 text-blue-300">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-[#0ea5e9]/20 bg-[#0ea5e9]/10 text-[#7dd3fc]">
             Open Source Desktop App
           </span>
         </div>

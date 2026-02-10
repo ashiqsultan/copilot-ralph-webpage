@@ -19,17 +19,17 @@
     --text-muted: #6e7191;
 
     /* Accents */
-    --accent-blue: #3b82f6;
-    --accent-blue-hover: #2563eb;
-    --accent-blue-light: #93c5fd;
-    --twitter-blue: #3b82f6;
-    --twitter-blue-hover: #2563eb;
-    --twitter-blue-light: #93c5fd;
-    --accent-purple: #8b5cf6;
-    --accent-cyan: #06b6d4;
+    --accent-blue: #0ea5e9;
+    --accent-blue-hover: #0284c7;
+    --accent-blue-light: #7dd3fc;
+    --twitter-blue: #0ea5e9;
+    --twitter-blue-hover: #0284c7;
+    --twitter-blue-light: #7dd3fc;
+    --accent-purple: #14b8a6;
+    --accent-cyan: #10b981;
 
     /* Status Colors */
-    --blue-transparent: #3b82f620;
+    --blue-transparent: #0ea5e920;
     --gold: #f59e0b;
     --red: #ef4444;
   }
@@ -103,7 +103,7 @@
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+  background: linear-gradient(135deg, #0ea5e9, #14b8a6, #10b981);
   background-size: 200% 200%;
   animation: gradient-shift 4s ease infinite;
   -webkit-background-clip: text;
@@ -114,7 +114,7 @@
 /* Glow button */
 .btn-glow {
   position: relative;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #0ea5e9, #14b8a6);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -122,7 +122,7 @@
   content: '';
   position: absolute;
   inset: -2px;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+  background: linear-gradient(135deg, #0ea5e9, #14b8a6, #10b981);
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
@@ -136,22 +136,22 @@
 
 .btn-glow:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.3);
 }
 
 /* Glass card */
 .glass-card {
   background: linear-gradient(135deg, rgba(15, 17, 23, 0.8), rgba(22, 24, 34, 0.6));
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.08);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(59, 130, 246, 0.2);
+  border-color: rgba(14, 165, 233, 0.2);
   background: linear-gradient(135deg, rgba(15, 17, 23, 0.9), rgba(22, 24, 34, 0.7));
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 60px rgba(59, 130, 246, 0.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 60px rgba(14, 165, 233, 0.06);
 }
 
 /* Screenshot frame */
@@ -159,10 +159,10 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(14, 165, 233, 0.15);
   box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.5),
-    0 0 80px rgba(59, 130, 246, 0.08);
+    0 0 80px rgba(14, 165, 233, 0.08);
 }
 
 .screenshot-frame::before {
@@ -171,7 +171,7 @@
   inset: 0;
   border-radius: 16px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), transparent, rgba(139, 92, 246, 0.3));
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), transparent, rgba(20, 184, 166, 0.3));
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: xor;
